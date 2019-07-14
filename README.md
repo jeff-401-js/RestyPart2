@@ -27,7 +27,7 @@ Jeff
 
 ### Setup
 
-    "@babel/core": "7.4.3",
+       "@babel/core": "7.4.3",
     "@svgr/webpack": "4.1.0",
     "@typescript-eslint/eslint-plugin": "1.6.0",
     "@typescript-eslint/parser": "1.6.0",
@@ -40,6 +40,8 @@ Jeff
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^4.0.0",
     "eslint-loader": "2.1.2",
@@ -74,6 +76,7 @@ Jeff
     "react-jsonschema-form": "1.5.0",
     "react-redux": "7.0.3",
     "react-router-dom": "5.0.0",
+    "react-styleguidist": "^9.1.11",
     "redux": "4.0.1",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
