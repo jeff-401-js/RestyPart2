@@ -2,10 +2,10 @@ import './resty.css';
 
 import React from 'react';
 import superagent from 'superagent';
-import ReactJson from 'react-json-view';
 import md5 from 'md5';
-import History from '../history/index'
-import Form from '../form/index'
+import History from '../history/index';
+import Form from '../form/index';
+import Json from '../json/index';
 
 class RESTy extends React.Component {
   constructor(props) {
@@ -129,20 +129,7 @@ class RESTy extends React.Component {
         <section className="deck">
           <Form callAPI={this.callAPI} url={this.state.url} handleChange={this.handleChange} method={this.state.method} requestBody={this.state.requestBody} toggleHeaders={this.toggleHeaders} username={this.state.username} password={this.state.password} headersVisible={this.state.headersVisible} token={this.state.token}/>
 
-          <div id="json">
-            <ReactJson
-              name="Headers"
-              enableClipboard={false}
-              collapsed={true}
-              src={this.state.header}
-            />
-            <ReactJson
-              name="Response"
-              enableClipboard={false}
-              collapsed={false}
-              src={this.state.body}
-            />
-          </div>
+          <Json header={this.state.header} body={this.state.body}/>
         </section>
       </main>
     );
