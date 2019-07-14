@@ -84,7 +84,7 @@ class Form extends React.Component {
                   }
                 />
               </div>
-
+                  <Headers toggleHeaders={this.props.toggleHeaders} headersVisible={this.props.headersVisible} handleChange={this.props.handleChange} username={this.props.username} password={this.props.password} token={this.props.token}/>
               {/* <div id="headers">
                 <button onClick={this.props.toggleHeaders}>
                   Headers
