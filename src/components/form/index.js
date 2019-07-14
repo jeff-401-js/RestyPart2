@@ -1,4 +1,5 @@
 import React from 'react';
+import Headers from '../headers/index'
 
 class Form extends React.Component {
   render(){
@@ -84,7 +85,7 @@ class Form extends React.Component {
                 />
               </div>
 
-              <div id="headers">
+              {/* <div id="headers">
                 <button onClick={this.props.toggleHeaders}>
                   Headers
                 </button>
@@ -115,7 +116,7 @@ class Form extends React.Component {
                     value={this.props.token}
                   />
                 </div>
-              </div>
+              </div> */}
             </section>
           </form>
     )
