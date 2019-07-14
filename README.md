@@ -8,7 +8,7 @@ Jeff
 
 ### Links and Resources
 
-- [Resty Part Two]()
+- [Heroku](https://sensationnel-choucroute-81551.herokuapp.com)
 
 #### Documentation
 
@@ -27,7 +27,7 @@ Jeff
 
 ### Setup
 
-       "@babel/core": "7.4.3",
+    "@babel/core": "7.4.3",
     "@svgr/webpack": "4.1.0",
     "@typescript-eslint/eslint-plugin": "1.6.0",
     "@typescript-eslint/parser": "1.6.0",
@@ -74,10 +74,11 @@ Jeff
     "react-dom": "16.8.6",
     "react-json-view": "latest",
     "react-jsonschema-form": "1.5.0",
-    "react-redux": "7.0.3",
+    "react-redux": "^7.0.3",
     "react-router-dom": "5.0.0",
+    "react-scripts": "^3.0.1",
     "react-styleguidist": "^9.1.11",
-    "redux": "4.0.1",
+    "redux": "^4.0.1",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "semver": "6.0.0",
