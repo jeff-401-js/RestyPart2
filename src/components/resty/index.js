@@ -5,6 +5,7 @@ import superagent from 'superagent';
 import ReactJson from 'react-json-view';
 import md5 from 'md5';
 import History from '../history/index'
+import Form from '../form/index'
 
 class RESTy extends React.Component {
   constructor(props) {
