@@ -4,6 +4,7 @@ import React from 'react';
 import superagent from 'superagent';
 import ReactJson from 'react-json-view';
 import md5 from 'md5';
+import History from '../history/index'
 
 class RESTy extends React.Component {
   constructor(props) {
@@ -137,6 +138,7 @@ class RESTy extends React.Component {
               ))}
           </ul>
         </aside> */}
+        <History history={this.state.history} reset={this.resetFormFromHistory}/>
         <section className="deck">
           <form onSubmit={this.callAPI}>
             <section>

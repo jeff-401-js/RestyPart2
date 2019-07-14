@@ -6,14 +6,14 @@ class History extends React.Component {
       <aside>
         <h2>History</h2>
         <ul id="history">
-          {this.state.history &&
-            Object.keys(this.state.history).map(key => (
-              <li key={key} id={key} onClick={this.resetFormFromHistory}>
+          {this.props.history &&
+            Object.keys(this.props.history).map(key => (
+              <li key={key} id={key} onClick={this.props.resetFormFromHistory}>
                 <span>
-                  <strong>{this.state.history[key].method}</strong>
+                  <strong>{this.props.history[key].method}</strong>
                 </span>
-                <span>{this.state.history[key].host}</span>
-                <span>{this.state.history[key].path}</span>
+                <span>{this.props.history[key].host}</span>
+                <span>{this.props.history[key].path}</span>
               </li>
             ))}
         </ul>
