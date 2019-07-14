@@ -122,7 +122,7 @@ class RESTy extends React.Component {
   render() {
     return (
       <main>
-        <aside>
+        {/* <aside>
           <h2>History</h2>
           <ul id="history">
             {this.state.history &&
@@ -136,7 +136,7 @@ class RESTy extends React.Component {
                 </li>
               ))}
           </ul>
-        </aside>
+        </aside> */}
         <section className="deck">
           <form onSubmit={this.callAPI}>
             <section>
