@@ -141,7 +141,8 @@ class RESTy extends React.Component {
         </aside> */}
         <History history={this.state.history} reset={this.resetFormFromHistory}/>
         <section className="deck">
-          <form onSubmit={this.callAPI}>
+          <Form callAPI={this.callAPI} url={this.state.url} handleChange={this.handleChange} method={this.state.method} requestBody={this.state.requestBody} toggleHeaders={this.toggleHeaders} username={this.state.username} password={this.state.password} headersVisible={this.state.headersVisible} token={this.state.token}/>
+          {/* <form onSubmit={this.callAPI}>
             <section>
               <input
                 type="text"
@@ -255,7 +256,7 @@ class RESTy extends React.Component {
                 </div>
               </div>
             </section>
-          </form>
+          </form> */}
           <div id="json">
             <ReactJson
               name="Headers"
