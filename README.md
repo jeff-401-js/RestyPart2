@@ -17,13 +17,18 @@ Jeff
 ## Modules
 
 `index.js` - Renders the app
-`App.js` - Aggregator file to gather all components decides which to display depending on whether a star wars character was clicked
-`actions.js` - redux action file for the api actions
-`reducers.js` - redux reducer file for api actions
-`index.js` - redux store
-`list.js` - controls the list that will be shown
-`record.js` - controls the actions on all the records
-`reporter.js` - logger that console logs actions
+`app.js` - Aggregator file to gather components
+`resty/index.js` - Main Aggregator file to gather all components also contains state to handle information as well as functionality
+`form/index.js` - form components
+`header/index.js` - basic header
+`footer/index.js` - basic footer
+`json/index.js` - json textbox component
+`headers/index.js` - headers component
+`history/index.js` - history component
+`store/actions.js` - redux action file for the api actions
+`store/reducers.js` - redux reducer file for api actions
+`store/index.js` - redux store
+
 
 ### Setup
 
