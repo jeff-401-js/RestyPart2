@@ -37,7 +37,7 @@ export default App;
  * handler function to dispatch state to props
  * @param {function} dispatch
  * @param {object} getState
- * @description fires off the get or getOne functions
+ * @description fires off the get, getOne, handlePost, handlePut, or handleDelete functions
  */
 
 // const mapDispatchToProps = (dispatch, getState) => ({
