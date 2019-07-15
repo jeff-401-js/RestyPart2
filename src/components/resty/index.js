@@ -29,6 +29,10 @@ class RESTy extends React.Component {
     };
   }
 
+/**
+ * componentDidMount function
+ * @description Sets the state for history on page load
+ */
   componentDidMount() {
     try {
       let history = JSON.parse(localStorage.getItem('history'));
@@ -38,9 +42,18 @@ class RESTy extends React.Component {
     }
   }
 
+/**
+ * saveHistory function
+ * @description saves the history to state
+ */
   saveHistory = () => {
     localStorage.setItem('history', JSON.stringify(this.state.history));
   };
+
+/**
+ * updateHistory function
+ * @description updates the history in state
+ */
 
   updateHistory = () => {
     let url = new URL(this.state.url);
@@ -65,12 +78,22 @@ class RESTy extends React.Component {
     this.saveHistory();
   };
 
+/**
+ * resetFormFromHistory function
+ * @param {object} event
+ * @description resets the form from the history
+ */
   resetFormFromHistory = event => {
     event.preventDefault();
     let newState = this.state.history[event.currentTarget.id];
     this.setState({ ...newState });
   };
 
+/**
+ * handler function for the any change events
+ * @param {object} event
+ * @description Sets the state properties to whatever was passed in from the event
+ */
   handleChange = event => {
     let prop = event.target.name;
     let value = event.target.value;
@@ -89,11 +112,20 @@ class RESTy extends React.Component {
     }
   };
 
+/**
+ * toggleHeaders function
+ * @description toggles the headers visibility
+ */
   toggleHeaders = () => {
     let headersVisible = !this.state.headersVisible;
     this.setState({ headersVisible });
   };
 
+/**
+ * callAPI function
+ * @param {object} event
+ * @description calls the API that was passed in
+ */
   callAPI = event => {
     event.preventDefault();
 
