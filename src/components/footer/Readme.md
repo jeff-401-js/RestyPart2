@@ -1,0 +1,2 @@
+The Footer Component
+<Footer />

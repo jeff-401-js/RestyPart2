@@ -9,6 +9,12 @@ import RESTy from './components/resty';
 
 // import * as actions from "./store/actions.js";
 
+/**
+ * App class component
+ * @description App class acts as an aggregator for components
+ */
+
+
 class App extends React.Component {
   render() {
     return (

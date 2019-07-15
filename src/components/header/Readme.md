@@ -1,0 +1,2 @@
+The Header Component
+<Header />
