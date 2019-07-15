@@ -37,12 +37,11 @@ export default App;
  * handler function to dispatch state to props
  * @param {function} dispatch
  * @param {object} getState
- * @description fires off the get, getOne, handlePost, handlePut, or handleDelete functions
+ * @description fires off the get, handlePost, handlePut, or handleDelete functions
  */
 
 // const mapDispatchToProps = (dispatch, getState) => ({
-//   get: () => dispatch(actions.getRemoteData()),
-//   getOne: payload => dispatch(actions.getRemotePerson(payload)),
+//   get: payload => dispatch(actions.getRemote(payload)),
 //   handlePost: payload => dispatch(actions.postRemote(payload)),
 //   handlePut: payload => dispatch(actions.putRemote(payload)),
 //   handleDelete: payload => dispatch(actions.deleteRemote(payload))
