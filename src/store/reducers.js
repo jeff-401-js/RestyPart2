@@ -1,5 +1,12 @@
 let initialState = {};
 
+/**
+ * Reducer function
+ * @param {object} state
+ * @param {string} action
+ * @description reducer that handles events coming from the action and performs a change on them
+ */
+
 export default (state = initialState, action) => {
   let { type, payload = {} } = action;
   let { id, model, record } = payload;

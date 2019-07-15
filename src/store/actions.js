@@ -1,5 +1,11 @@
 import superagent from "superagent";
 
+/**
+ * getRemote function to handle type GET
+ * @param {object} payload
+ * @description handles type GET events and their payload
+ */
+
 export const getRemote = payload => dispatch => {
 
   return superagent
@@ -14,12 +20,24 @@ export const getRemote = payload => dispatch => {
     });
 };
 
+/**
+ * function to handle type GET
+ * @param {object} payload
+ * @description handles type GET events and their payload
+ */
+
 export const get = payload => {
   return {
     type: "GET",
     payload: payload
   };
 };
+
+/**
+ * postRemote function to handle type POST
+ * @param {object} payload
+ * @description handles type POST events and their payload
+ */
 
 export const postRemote = payload => dispatch => {
 
@@ -37,6 +55,12 @@ export const postRemote = payload => dispatch => {
     });
 };
 
+/**
+ * function to handle type POST
+ * @param {object} payload
+ * @description handles type POST events and their payload
+ */
+
 export const post = payload => {
   return {
     type: "POST",
@@ -44,6 +68,11 @@ export const post = payload => {
   };
 };
 
+/**
+ * putRemote function to handle type PUT
+ * @param {object} payload
+ * @description handles type PUT events and their payload
+ */
 export const putRemote = payload => dispatch => {
 
   return superagent
@@ -60,6 +89,11 @@ export const putRemote = payload => dispatch => {
     });
 };
 
+/**
+ * function to handle type PUT
+ * @param {object} payload
+ * @description handles type PUT events and their payload
+ */
 export const put = payload => {
   return {
     type: "PUT",
@@ -67,6 +101,11 @@ export const put = payload => {
   };
 };
 
+/**
+ * deleteRemote function to handle type DELETE
+ * @param {object} payload
+ * @description handles type DELETE events and their payload
+ */
 export const deleteRemote = payload => dispatch => {
 
   return superagent
@@ -81,6 +120,11 @@ export const deleteRemote = payload => dispatch => {
     });
 };
 
+/**
+ * function to handle type DELETE
+ * @param {object} payload
+ * @description handles type DELETE events and their payload
+ */
 export const destroy = payload => {
   return {
     type: "DELETE",

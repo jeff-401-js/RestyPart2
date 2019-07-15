@@ -5,6 +5,11 @@ import thunk from "redux-thunk";
 
 import Reducer from "./reducers.js";
 
+/**
+ * combine Reducers object
+ * @description part of redux which combines all reducers
+ */
+
 let reducers = combineReducers({
   restyStore: Reducer
 });
