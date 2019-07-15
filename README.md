@@ -79,6 +79,7 @@ Jeff
     "react-scripts": "^3.0.1",
     "react-styleguidist": "^9.1.11",
     "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
