@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Headers class component that returns the div containing the headers
+ * @description returns a div containing the headers components for adding username, password and tokens
+ */
+
 class Headers extends React.Component {
   render(){
     return(

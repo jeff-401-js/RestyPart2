@@ -1,6 +1,11 @@
 import React from 'react';
 import Headers from '../headers/index'
 
+/**
+ * Form class component
+ * @description returns a Form with a url input box, line of radio buttons with a submit button and a textarea
+ */
+
 class Form extends React.Component {
   render(){
     return(
