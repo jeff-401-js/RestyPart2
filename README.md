@@ -9,7 +9,7 @@ Jeff
 ### Links and Resources
 
 - [Heroku](https://sensationnel-choucroute-81551.herokuapp.com)
-- [PR]()
+- [PR](https://github.com/jeff-401-js/RestyPart2/pull/1)
 
 #### Documentation
 
