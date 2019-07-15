@@ -17,18 +17,18 @@ Jeff
 
 ## Modules
 
-`index.js` - Renders the app
-`app.js` - Aggregator file to gather components
-`resty/index.js` - Main Aggregator file to gather all components also contains state to handle information as well as functionality
-`form/index.js` - form components
-`header/index.js` - basic header
-`footer/index.js` - basic footer
-`json/index.js` - json textbox component
-`headers/index.js` - headers component
-`history/index.js` - history component
-`store/actions.js` - redux action file for the api actions
-`store/reducers.js` - redux reducer file for api actions
-`store/index.js` - redux store
+* `index.js` - Renders the app
+* `app.js` - Aggregator file to gather components
+* `resty/index.js` - Main Aggregator file to gather all components also contains state to handle information as well as functionality
+* `form/index.js` - form components
+* `header/index.js` - basic header
+* `footer/index.js` - basic footer
+* `json/index.js` - json textbox component
+* `headers/index.js` - headers component
+* `history/index.js` - history component
+* `store/actions.js` - redux action file for the api actions
+* `store/reducers.js` - redux reducer file for api actions
+* `store/index.js` - redux store
 
 
 ### Setup
