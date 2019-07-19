@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { RestyContext } from "../../context/restyContext";
 import ReactJson from 'react-json-view';
 
 /**
@@ -6,25 +7,25 @@ import ReactJson from 'react-json-view';
  * @description returns a div using the react json dependency for json viewing
  */
 
-class Json extends React.Component {
-  render() {
+function Json () {
+  const state = useContext(RestyContext);
     return(
       <div id="json">
       <ReactJson
         name="Headers"
         enableClipboard={false}
         collapsed={true}
-        src={this.props.header}
+        src={state.header}
       />
       <ReactJson
         name="Response"
         enableClipboard={false}
         collapsed={false}
-        src={this.props.body}
+        src={state.body}
       />
     </div>
     )
-  }
+  
 }
 
 export default Json;

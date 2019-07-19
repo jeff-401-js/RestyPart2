@@ -90,7 +90,7 @@ const state = useContext(RestyContext);
                   }
                 />
               </div>
-                  {/* <Headers toggleHeaders={this.props.toggleHeaders} headersVisible={this.props.headersVisible} handleChange={this.props.handleChange} username={this.props.username} password={this.props.password} token={this.props.token}/> */}
+                  <Headers />
 
             </section>
           </form>

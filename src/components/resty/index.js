@@ -35,7 +35,7 @@ function RESTy () {
         <section className="deck">
           <Form />
 
-          <Json header={this.state.header} body={this.state.body}/>
+          <Json />
         </section>
       </main>
     );
