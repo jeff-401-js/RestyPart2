@@ -14,18 +14,6 @@ import Json from '../json/index';
 function RESTy () {
   const state = useContext(RestyContext);
 
-/**
- * useEffect function
- * @description Sets the state for history on page load
- */
-  useEffect(() => {
-    try {
-      let history = JSON.parse(localStorage.getItem('history'));
-      state.saveHistory(history);
-    } catch (e) {
-      console.error(e);
-    };
-  }, []);
 
 
     return (

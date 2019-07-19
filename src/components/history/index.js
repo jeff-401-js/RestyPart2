@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { RestyContext } from "../../context/restyContext";
 /**
  * History function component that returns the aside containing the History outputs
@@ -7,6 +7,19 @@ import { RestyContext } from "../../context/restyContext";
 
 function History () {
   const state = useContext(RestyContext);
+  /**
+   * useEffect function
+   * @description Sets the state for history on page load
+   */
+    useEffect(() => {
+      try {
+        let history = JSON.parse(localStorage.getItem('history'));
+        if(history) state.saveHistory(history);
+      } catch (e) {
+        console.error(e);
+      };
+    }, []);
+
     return(
       <aside>
         <h2>History</h2>

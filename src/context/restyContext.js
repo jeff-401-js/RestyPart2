@@ -38,7 +38,7 @@ class RestyProvider extends React.Component {
 */
 saveHistory = (history) => {
   localStorage.setItem('history', JSON.stringify(history));
-  this.setState({history});
+  if(history) this.setState({history});
 };
 
 /**
@@ -118,7 +118,6 @@ toggleHeaders = () => {
 * @description calls the API that was passed in
 */
 callAPI = event => {
-  console.log('hey');
   event.preventDefault();
 
   let contentType = { 'Content-Type': 'application/json' };
