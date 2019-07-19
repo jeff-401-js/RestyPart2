@@ -1,12 +1,12 @@
 import React from 'react';
 
 /**
- * Footer class component
+ * Footer function component
  * @description returns a simple footer that contains the copyright and author name
  */
 
-class Footer extends React.Component {
-  render() {
+function Footer () {
+
     return (
       <footer>
         <section>
@@ -14,7 +14,6 @@ class Footer extends React.Component {
         </section>
       </footer>
     );
-  }
 }
 
 export default Footer;
