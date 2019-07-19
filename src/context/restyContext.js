@@ -26,7 +26,8 @@ class RestyProvider extends React.Component {
       updateHistory: this.updateHistory,
       resetFormFromHistory: this.resetFormFromHistory,
       handleChange: this.handleChange,
-      toggleHeaders: this.toggleHeaders
+      toggleHeaders: this.toggleHeaders,
+      callAPI: this.callAPI
 
     };
   }
@@ -129,6 +130,7 @@ toggleHeaders = () => {
 * @description calls the API that was passed in
 */
 callAPI = event => {
+  console.log('hey');
   event.preventDefault();
 
   let contentType = { 'Content-Type': 'application/json' };
