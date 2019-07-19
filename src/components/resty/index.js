@@ -31,9 +31,9 @@ function RESTy () {
     return (
       <main>
 
-        <History history={this.state.history} reset={this.resetFormFromHistory}/>
+        <History />
         <section className="deck">
-          <Form callAPI={this.callAPI} url={this.state.url} handleChange={this.handleChange} method={this.state.method} requestBody={this.state.requestBody} toggleHeaders={this.toggleHeaders} username={this.state.username} password={this.state.password} headersVisible={this.state.headersVisible} token={this.state.token}/>
+          <Form />
 
           <Json header={this.state.header} body={this.state.body}/>
         </section>

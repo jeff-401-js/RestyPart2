@@ -1,30 +1,30 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import { RestyContext } from "../../context/restyContext";
 /**
  * History class component that returns the aside containing the History outputs
  * @description returns an aside that contains the History
  */
 
-class History extends React.Component {
-  render() {
+function History () {
+  const state = useContext(RestyContext);
     return(
       <aside>
         <h2>History</h2>
         <ul id="history">
-          {this.props.history &&
-            Object.keys(this.props.history).map(key => (
-              <li key={key} id={key} onClick={this.props.resetFormFromHistory}>
+          {state.history &&
+            Object.keys(state.history).map(key => (
+              <li key={key} id={key} onClick={state.resetFormFromHistory}>
                 <span>
-                  <strong>{this.props.history[key].method}</strong>
+                  <strong>{state.history[key].method}</strong>
                 </span>
-                <span>{this.props.history[key].host}</span>
-                <span>{this.props.history[key].path}</span>
+                <span>{state.history[key].host}</span>
+                <span>{state.history[key].path}</span>
               </li>
             ))}
         </ul>
       </aside>
     )
-  }
+  
 }
 
 export default History;
