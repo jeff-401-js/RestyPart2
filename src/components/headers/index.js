@@ -2,7 +2,7 @@ import React, { useContext} from 'react';
 import { RestyContext } from "../../context/restyContext";
 
 /**
- * Headers class component that returns the div containing the headers
+ * Headers function component that returns the div containing the headers
  * @description returns a div containing the headers components for adding username, password and tokens
  */
 

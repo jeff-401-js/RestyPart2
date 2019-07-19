@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { RestyContext } from "../../context/restyContext";
 /**
- * History class component that returns the aside containing the History outputs
+ * History function component that returns the aside containing the History outputs
  * @description returns an aside that contains the History
  */
 

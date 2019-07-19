@@ -7,7 +7,7 @@ import Form from '../form/index';
 import Json from '../json/index';
 
 /**
- * RESTy class component that aggregates the other components and contains most of the apps functionality
+ * RESTy function component that aggregates the other components and contains most of the apps functionality
  * @description returns most of the other components to app for rendering, contains state, main class for the entire app
  */
 

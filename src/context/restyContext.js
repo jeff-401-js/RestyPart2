@@ -5,8 +5,8 @@ import md5 from 'md5';
 export const RestyContext = React.createContext();
 
 /**
- * Application provider class component
- * @description Application provider  class that applies context for the application components
+ * RESTy provider class component
+ * @description Resty provider  class that applies context for the entire application and all components
  */
 class RestyProvider extends React.Component {
   constructor(props) {
@@ -31,18 +31,6 @@ class RestyProvider extends React.Component {
 
     };
   }
-/**
- * componentDidMount function
- * @description Sets the state for history on page load
- */
-// componentDidMount() {
-//   try {
-//     let history = JSON.parse(localStorage.getItem('history'));
-//     this.setState({ history });
-//   } catch (e) {
-//     console.error(e);
-//   }
-// }
 
 /**
 * saveHistory function
