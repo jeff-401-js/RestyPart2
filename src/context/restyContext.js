@@ -34,21 +34,22 @@ class RestyProvider extends React.Component {
  * componentDidMount function
  * @description Sets the state for history on page load
  */
-componentDidMount() {
-  try {
-    let history = JSON.parse(localStorage.getItem('history'));
-    this.setState({ history });
-  } catch (e) {
-    console.error(e);
-  }
-}
+// componentDidMount() {
+//   try {
+//     let history = JSON.parse(localStorage.getItem('history'));
+//     this.setState({ history });
+//   } catch (e) {
+//     console.error(e);
+//   }
+// }
 
 /**
 * saveHistory function
 * @description saves the history to state
 */
-saveHistory = () => {
-  localStorage.setItem('history', JSON.stringify(this.state.history));
+saveHistory = (history) => {
+  localStorage.setItem('history', JSON.stringify(history));
+  this.setState({history});
 };
 
 /**
