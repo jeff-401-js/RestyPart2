@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import RestyProvider from "./src/context/restyContext";
 
 import App from './app.js';
 
@@ -13,7 +14,9 @@ class Main extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <App />
+        <RestyProvider>
+         <App />
+        </RestyProvider>
       </BrowserRouter>
     );
   }
