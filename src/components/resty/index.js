@@ -2,8 +2,15 @@ import './resty.css';
 
 import React from 'react';
 import superagent from 'superagent';
-import ReactJson from 'react-json-view';
 import md5 from 'md5';
+import History from '../history/index';
+import Form from '../form/index';
+import Json from '../json/index';
+
+/**
+ * RESTy class component that aggregates the other components and contains most of the apps functionality
+ * @description returns most of the other components to app for rendering, contains state, main class for the entire app
+ */
 
 class RESTy extends React.Component {
   constructor(props) {
@@ -22,6 +29,10 @@ class RESTy extends React.Component {
     };
   }
 
+/**
+ * componentDidMount function
+ * @description Sets the state for history on page load
+ */
   componentDidMount() {
     try {
       let history = JSON.parse(localStorage.getItem('history'));
@@ -31,9 +42,18 @@ class RESTy extends React.Component {
     }
   }
 
+/**
+ * saveHistory function
+ * @description saves the history to state
+ */
   saveHistory = () => {
     localStorage.setItem('history', JSON.stringify(this.state.history));
   };
+
+/**
+ * updateHistory function
+ * @description updates the history in state
+ */
 
   updateHistory = () => {
     let url = new URL(this.state.url);
@@ -58,12 +78,22 @@ class RESTy extends React.Component {
     this.saveHistory();
   };
 
+/**
+ * resetFormFromHistory function
+ * @param {object} event
+ * @description resets the form from the history
+ */
   resetFormFromHistory = event => {
     event.preventDefault();
     let newState = this.state.history[event.currentTarget.id];
     this.setState({ ...newState });
   };
 
+/**
+ * handler function for the any change events
+ * @param {object} event
+ * @description Sets the state properties to whatever was passed in from the event
+ */
   handleChange = event => {
     let prop = event.target.name;
     let value = event.target.value;
@@ -82,11 +112,20 @@ class RESTy extends React.Component {
     }
   };
 
+/**
+ * toggleHeaders function
+ * @description toggles the headers visibility
+ */
   toggleHeaders = () => {
     let headersVisible = !this.state.headersVisible;
     this.setState({ headersVisible });
   };
 
+/**
+ * callAPI function
+ * @param {object} event
+ * @description calls the API that was passed in
+ */
   callAPI = event => {
     event.preventDefault();
 
@@ -122,151 +161,12 @@ class RESTy extends React.Component {
   render() {
     return (
       <main>
-        <aside>
-          <h2>History</h2>
-          <ul id="history">
-            {this.state.history &&
-              Object.keys(this.state.history).map(key => (
-                <li key={key} id={key} onClick={this.resetFormFromHistory}>
-                  <span>
-                    <strong>{this.state.history[key].method}</strong>
-                  </span>
-                  <span>{this.state.history[key].host}</span>
-                  <span>{this.state.history[key].path}</span>
-                </li>
-              ))}
-          </ul>
-        </aside>
+
+        <History history={this.state.history} reset={this.resetFormFromHistory}/>
         <section className="deck">
-          <form onSubmit={this.callAPI}>
-            <section>
-              <input
-                type="text"
-                className="wide"
-                name="url"
-                placeholder="URL"
-                value={this.state.url}
-                onChange={this.handleChange}
-              />
+          <Form callAPI={this.callAPI} url={this.state.url} handleChange={this.handleChange} method={this.state.method} requestBody={this.state.requestBody} toggleHeaders={this.toggleHeaders} username={this.state.username} password={this.state.password} headersVisible={this.state.headersVisible} token={this.state.token}/>
 
-              <div id="methods">
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'get' ? true : false}
-                    value="get"
-                    onChange={this.handleChange}
-                  />
-                  <span>GET</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'post' ? true : false}
-                    value="post"
-                    onChange={this.handleChange}
-                  />
-                  <span>POST</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'put' ? true : false}
-                    value="put"
-                    onChange={this.handleChange}
-                  />
-                  <span>PUT</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'patch' ? true : false}
-                    value="patch"
-                    onChange={this.handleChange}
-                  />
-                  <span>PATCH</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="method"
-                    checked={this.state.method === 'delete' ? true : false}
-                    value="delete"
-                    onChange={this.handleChange}
-                  />
-                  <span>DELETE</span>
-                </label>
-                <label>
-                  <button type="submit">Go!</button>
-                </label>
-              </div>
-            </section>
-
-            <section className="deck col-2">
-              <div id="body">
-                <textarea
-                  placeholder="Raw JSON Body"
-                  name="requestBody"
-                  onChange={this.handleChange}
-                  value={this.state.requestBody}
-                  disabled={
-                    this.state.method.match(/get|delete/) ? true : false
-                  }
-                />
-              </div>
-
-              <div id="headers">
-                <button onClick={this.toggleHeaders}>
-                  Headers
-                </button>
-                <div className={'visible-' + this.state.headersVisible}>
-                  <h2>Basic Authorization</h2>
-                  <input
-                    onChange={this.handleChange}
-                    name="username"
-                    placeholder="Username"
-                    value={this.state.username}
-                  />
-                  <input
-                    onChange={this.handleChange}
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    value={this.state.password}
-                  />
-                </div>
-                <div className={'visible-' + this.state.headersVisible}>
-                  <h2>Bearer Token</h2>
-                  <input
-                    onChange={this.handleChange}
-                    type="text"
-                    className="wide"
-                    name="token"
-                    placeholder="Token"
-                    value={this.state.token}
-                  />
-                </div>
-              </div>
-            </section>
-          </form>
-          <div id="json">
-            <ReactJson
-              name="Headers"
-              enableClipboard={false}
-              collapsed={true}
-              src={this.state.header}
-            />
-            <ReactJson
-              name="Response"
-              enableClipboard={false}
-              collapsed={false}
-              src={this.state.body}
-            />
-          </div>
+          <Json header={this.state.header} body={this.state.body}/>
         </section>
       </main>
     );

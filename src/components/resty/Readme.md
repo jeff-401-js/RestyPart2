@@ -1,0 +1,2 @@
+The RESTy Component
+<RESTy />

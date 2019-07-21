@@ -1,0 +1,2 @@
+The History Component
+<History />
