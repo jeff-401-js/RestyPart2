@@ -1,5 +1,5 @@
-The Header Component
-import Header from './index.js'
+## The Header Component
+#### Attaches a simple h1 header to the page
 ```js
 <Header />
 ```
