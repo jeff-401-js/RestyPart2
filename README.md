@@ -1,6 +1,6 @@
-# Resty Part Two
+# Resty Part Three
 
-Resty Part Two
+Resty Part Three
 
 ### Author: Student/Group Name
 
@@ -26,9 +26,8 @@ Jeff
 * `json/index.js` - json textbox component
 * `headers/index.js` - headers component
 * `history/index.js` - history component
-* `store/actions.js` - redux action file for the api actions
-* `store/reducers.js` - redux reducer file for api actions
-* `store/index.js` - redux store
+* `restyContext.js` - Context file that contains state for the entire app as well as most functionality
+
 
 
 ### Setup
