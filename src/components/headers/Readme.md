@@ -1,6 +1,6 @@
 The Headers Component
-```jsx static
 import Headers from './index.js'
-
+```jsx static
 
 <Headers />
+```

@@ -1,4 +1,5 @@
 The RESTy Component
-```js static
-
+Acts as aggregator for the other components that make up the app
+```jsx static
 <RESTy />
+```
