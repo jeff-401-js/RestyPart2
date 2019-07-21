@@ -1,18 +1,19 @@
 import React from 'react';
 
 /**
- * Header class component
+ * Header function component
+ * @public
  * @description returns a simple h1 that contains the title of RESTy
  */
 
-class Header extends React.Component {
-  render() {
+function Header () {
+
     return (
       <header>
         <h1>RESTy</h1>
       </header>
     );
-  }
+  
 }
 
 export default Header;

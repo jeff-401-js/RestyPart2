@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Headers from '../headers/index'
+import { RestyContext } from "../../context/restyContext";
 
 /**
- * Form class component
+ * Form function component
+ * @public
  * @description returns a Form with a url input box, line of radio buttons with a submit button and a textarea
  */
 
-class Form extends React.Component {
-  render(){
+function Form() {
+const state = useContext(RestyContext);
     return(
-      <form onSubmit={this.props.callAPI}>
+      <form onSubmit={state.callAPI}>
             <section>
               <input
                 type="text"
                 className="wide"
                 name="url"
                 placeholder="URL"
-                value={this.props.url}
-                onChange={this.props.handleChange}
+                value={state.url}
+                onChange={state.handleChange}
               />
 
               <div id="methods">
@@ -25,9 +27,9 @@ class Form extends React.Component {
                   <input
                     type="radio"
                     name="method"
-                    checked={this.props.method === 'get' ? true : false}
+                    checked={state.method === 'get' ? true : false}
                     value="get"
-                    onChange={this.props.handleChange}
+                    onChange={state.handleChange}
                   />
                   <span>GET</span>
                 </label>
@@ -35,9 +37,9 @@ class Form extends React.Component {
                   <input
                     type="radio"
                     name="method"
-                    checked={this.props.method === 'post' ? true : false}
+                    checked={state.method === 'post' ? true : false}
                     value="post"
-                    onChange={this.props.handleChange}
+                    onChange={state.handleChange}
                   />
                   <span>POST</span>
                 </label>
@@ -45,9 +47,9 @@ class Form extends React.Component {
                   <input
                     type="radio"
                     name="method"
-                    checked={this.props.method === 'put' ? true : false}
+                    checked={state.method === 'put' ? true : false}
                     value="put"
-                    onChange={this.props.handleChange}
+                    onChange={state.handleChange}
                   />
                   <span>PUT</span>
                 </label>
@@ -55,9 +57,9 @@ class Form extends React.Component {
                   <input
                     type="radio"
                     name="method"
-                    checked={this.props.method === 'patch' ? true : false}
+                    checked={state.method === 'patch' ? true : false}
                     value="patch"
-                    onChange={this.props.handleChange}
+                    onChange={state.handleChange}
                   />
                   <span>PATCH</span>
                 </label>
@@ -65,9 +67,9 @@ class Form extends React.Component {
                   <input
                     type="radio"
                     name="method"
-                    checked={this.props.method === 'delete' ? true : false}
+                    checked={state.method === 'delete' ? true : false}
                     value="delete"
-                    onChange={this.props.handleChange}
+                    onChange={state.handleChange}
                   />
                   <span>DELETE</span>
                 </label>
@@ -82,19 +84,19 @@ class Form extends React.Component {
                 <textarea
                   placeholder="Raw JSON Body"
                   name="requestBody"
-                  onChange={this.props.handleChange}
-                  value={this.props.requestBody}
+                  onChange={state.handleChange}
+                  value={state.requestBody}
                   disabled={
-                    this.props.method.match(/get|delete/) ? true : false
+                    state.method.match(/get|delete/) ? true : false
                   }
                 />
               </div>
-                  <Headers toggleHeaders={this.props.toggleHeaders} headersVisible={this.props.headersVisible} handleChange={this.props.handleChange} username={this.props.username} password={this.props.password} token={this.props.token}/>
+                  <Headers />
 
             </section>
           </form>
     )
-  }
+  
 }
 
 export default Form;
