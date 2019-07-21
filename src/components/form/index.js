@@ -3,7 +3,8 @@ import Headers from '../headers/index'
 import { RestyContext } from "../../context/restyContext";
 
 /**
- * Form class component
+ * Form function component
+ * @public
  * @description returns a Form with a url input box, line of radio buttons with a submit button and a textarea
  */
 

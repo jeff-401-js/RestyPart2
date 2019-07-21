@@ -4,6 +4,7 @@ import ReactJson from 'react-json-view';
 
 /**
  * Json function component that returns the div containing the json outputs
+ * @public
  * @description returns a div using the react json dependency for json viewing
  */
 

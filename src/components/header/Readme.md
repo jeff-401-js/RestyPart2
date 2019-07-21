@@ -1,3 +1,6 @@
-import Header from './index.js'
 The Header Component
+```jsx static
+import Header from './index.js'
+
+
 <Header />

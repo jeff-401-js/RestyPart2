@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { RestyContext } from "../../context/restyContext";
 /**
  * History function component that returns the aside containing the History outputs
+ * @public
  * @description returns an aside that contains the History
  */
 
@@ -9,6 +10,7 @@ function History () {
   const state = useContext(RestyContext);
   /**
    * useEffect function
+   * @public
    * @description Sets the state for history on page load
    */
     useEffect(() => {

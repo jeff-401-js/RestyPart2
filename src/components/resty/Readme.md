@@ -1,3 +1,4 @@
-import RESTy from './index.js'
 The RESTy Component
+```js static
+
 <RESTy />

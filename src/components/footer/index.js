@@ -2,6 +2,7 @@ import React from 'react';
 
 /**
  * Footer function component
+ * @public
  * @description returns a simple footer that contains the copyright and author name
  */
 

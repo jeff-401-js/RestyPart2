@@ -3,6 +3,7 @@ import { RestyContext } from "../../context/restyContext";
 
 /**
  * Headers function component that returns the div containing the headers
+ * @public
  * @description returns a div containing the headers components for adding username, password and tokens
  */
 
